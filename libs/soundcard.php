@@ -40,7 +40,7 @@ class soundCard
             }
 
             // Limits
-            $limLine = "/\s+Limits: [\w\-_ ]* (\d+ \- \d+)/";
+            $limLine = "/\s+Limits: [\w\-_ ]* ([\-\d]+ \- [\-\d]+)/";
             if (preg_match($limLine, $mixerCommand, $limits)) {
                 $currentMixer['limits'] = explode(' - ', $limits[1]);
             }
